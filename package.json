@@ -2,7 +2,7 @@
   "name": "tick",
   "version": "1.0.0",
   "description": "Productivity app",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "dev_server": "nodemon server.js",
     "dev_client": "cd client && npm start",
@@ -14,6 +14,7 @@
   "dependencies": {
     "concurrently": "^6.2.2",
     "express": "^4.17.1",
+    "i": "^0.3.7",
     "nodemon": "^2.0.13"
   }
 }
