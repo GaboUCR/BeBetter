@@ -1,4 +1,4 @@
-import { user } from "./images"
+import { user, logo } from "./images"
 import { useEffect, useState, useContext } from "react";
 
 export function Navbar() {
@@ -12,20 +12,20 @@ export function Navbar() {
     }
 
     return (
-        <nav id="welcome" className="text-xl p-4 grid grid-cols-3 grid-rows-1 items-center">
-            <div className="">
-                <a href="/">Mail</a>
+        <nav id="welcome" className="text-xl grid grid-cols-2 grid-rows-1 bg-white px-14">
+            <div>
+                <a className="text-left" href="/"><img className="inline mx-2 h-12 w-12" src={logo} />BeBetter</a>
             </div>
-
+            
             <nav className="place-self-end" onMouseEnter={() => setIsShown("")}
                 onMouseLeave={() => setIsShown(" hidden")}>
 
-                <button className="px-6 py-2" >
-                    <img src={user} />
+                <button>
+                    <img className="h-9 w-9" src={user} />
                 </button>
 
                 <div className={"absolute border rounded-lg bg-white" + show_user_bar}>
-                    <button onClick={handleLogout} className="px-2">Log out</button>
+                    <button onClick={handleLogout} className="px-1">Log out</button>
                 </div>
 
             </nav>
